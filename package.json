@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "angular": "^1.6.5"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "webpack": "^3.3.0",
+    "html-webpack-plugin": "^2.29.0"
+  },
+  "scripts": {
+    "comment": "on peut definir ici nos propes scripts",
+    "clean:dist": "rimraf dist",
+    "build:prod": "npm run clean:dist && webpack --optimize-minimize",
+    "build:dev": "npm run clean:dist && webpack"
+  }
+}
