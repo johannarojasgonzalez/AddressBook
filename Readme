@@ -24,7 +24,7 @@ OU Dans package.json
     "build:dev": "webpack"
   }
 
-pour le builder : // on peut definir ici nos propes scripts
+pour le builder : npm run build:dev
 
 Pour generer automatiquement le fichier index.html : npm install html-webpack-plugin -D (-D == --save-dev)
 ------------------------------------------------------------------------------------------------
