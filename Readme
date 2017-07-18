@@ -1,0 +1,42 @@
+install angular
+
+npm install angular
+
+install webpack
+
+npm install webpack -D
+
+Pour lancer le webpack
+
+Configurer webpack.config.js
+
+node_modules\.bin\webpack
+
+OU
+
+node_modules\.bin\webpack --optimize-minimize
+
+OU Dans package.json
+
+"scripts": {
+    // on peut definir ici nos propes scripts
+    "build:prod": "webpack --optimize-minimize",
+    "build:dev": "webpack"
+  }
+
+pour le builder : npm run build:dev
+
+Pour generer automatiquement le fichier index.html : npm install html-webpack-plugin -D (-D == --save-dev)
+------------------------------------------------------------------------------------------------
+Installer rimraf pour pouvoir supprimer le fichier dist
+
+npm i rimraf -D
+
+"scripts": {
+    "comment": "on peut definir ici nos propes scripts",
+    "clean:dist": "rimraf dist",
+    "build:prod": "webpack --optimize-minimize",
+    "build:dev": "webpack"
+  }
+
+npm run clean:dist
