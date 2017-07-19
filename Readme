@@ -32,15 +32,16 @@ Installer rimraf pour pouvoir supprimer le fichier dist
 
 npm i rimraf -D
 
-"scripts": {
+  "scripts": {
     "comment": "on peut definir ici nos propes scripts",
+    "serve:dev": "webpack-dev-server",
     "clean:dist": "rimraf dist",
-    "build:prod": "webpack --optimize-minimize",
-    "build:dev": "webpack"
+    "build:prod": "npm run clean:dist && webpack --optimize-minimize",
+    "build:dev": "npm run clean:dist && webpack"
   }
 
 npm run clean:dist
-
+------------------------------------------------------------------------
 Installer pour rafraichir le serveur automatiquement lors de changements:
 
 npm i webpack-dev-server -D
@@ -85,3 +86,11 @@ npm i -D postcss-import postcss-loader
 créer le fichier config + ajout de la règle dans webpack.config
 
 Dans app.style.css import de bootstrap
+
+npm run build:dev
+nmp run serve:dev
+
+npm i autoprefixer -D
+
+-----------------------------Routing---------------------------------------
+npm install @uirouter/angularjs

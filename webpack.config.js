@@ -13,6 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
+        // A chaque fois qu'il importe un fichier js il le charge avec babel
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
@@ -25,6 +26,18 @@ module.exports = {
             }]]
           }
         }
+      },
+      {
+        test: /\.html$/,
+        use: 'raw-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader/url" },
+          { loader: "file-loader" },
+          {loader: "postcss-loader"}
+        ]
       }
     ]
   }

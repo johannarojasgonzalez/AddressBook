@@ -1,3 +1,9 @@
-import {contactModule} from './contacts/contact.module';
+import angular from 'angular';
+import {contactsModule} from "./contacts/contact.module"
+import uiRouter from '@uirouter/angularjs';
+import './app.style.css'
 
-contactModule();
+const appModule = angular.module('app.module', [
+  contactsModule.name,
+  uiRouter
+]);
