@@ -40,3 +40,15 @@ npm i rimraf -D
   }
 
 npm run clean:dist
+
+Installer pour rafraichir le serveur automatiquement lors de changements:
+
+npm i webpack-dev-server -D
+
+Dans package.json
+
+"serve:dev": "webpack-dev-server"
+
+Pour builder le projet
+
+npm run serve:dev : le server se lance par défaut sur le port 8080
