@@ -1,1 +1,9 @@
 <h2>Liste des contacts</h2>
+<table class="table table-striped">
+    <tr ng-repeat="contact in $ctrl.contacts">
+        <td>{{contact.name}}</td>
+        <td>
+            <a class="btn btn-xs btn-primary" href="#">Afficher</a>
+        </td>
+    </tr>
+</table>

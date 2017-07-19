@@ -16,7 +16,7 @@ appModule.config(['$stateProvider', function ($stateProvider) {
   $stateProvider
     .state({
       name: 'home',
-      url: '/home',
+      url: '/',
       component: 'homeModule'
     });
 }]);

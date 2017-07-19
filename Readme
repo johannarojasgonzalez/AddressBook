@@ -94,3 +94,12 @@ npm i autoprefixer -D
 
 -----------------------------Routing---------------------------------------
 npm install @uirouter/angularjs
+------------------------------ngRessource----------------------------------
+https://docs.angularjs.org/api/ngResource
+
+npm install --save angular-resource
+
+----------------------Fake Server-------------------------------------------
+npm i json-server -D
+
+"serve:rest": "json-server --watch db.json"

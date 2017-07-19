@@ -1,1 +1,24 @@
 <h2>Ajouter un contact</h2>
+
+<!--
+il faut des attributs name pour créer des nouveaux attributs dans le scope et pouvoir ajouter des validations
+ng-class="{'has-error': contactForm.name.$invalid && contactForm.name.$touched}"
+-->
+<form name="contactForm" novalidate ng-submit="contactForm.$valid && $ctrl.addContact($ctrl.contact)">
+    <div class="form-group" ng-class="{'has-error': contactForm.name.$invalid && contactForm.name.$touched}">
+        <label>Nom complet</label>
+        <input class="form-control" name="name" required ng-model="$ctrl.contact.name">
+        <span class="help-block" ng-if="contactForm.name.$error.required && contactForm.name.$touched">
+            Le nom complet est obligatoire
+        </span>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" ng-model="$ctrl.contact.email">
+    </div>
+    <div class="form-group">
+        <label>Téléphone</label>
+        <input type="tel" name="phone" class="form-control" ng-model="$ctrl.contact.phone">
+    </div>
+    <button class="btn btn-default" ng-disabled="contactForm.$invalid">Ajouter</button>
+</form>

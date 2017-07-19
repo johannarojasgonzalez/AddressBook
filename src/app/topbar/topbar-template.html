@@ -1,17 +1,14 @@
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <span class="navbar-brand">AddressBook</span>
+            <span class="navbar-brand" ui-sref="home" ui-sref-active="active">AddressBook</span>
         </div>
         <ul class="nav navbar-nav">
-            <li>
+            <li ui-sref-active="active">
                 <a ui-sref="contacts-list">Lister</a>
             </li>
-            <li>
+            <li ui-sref-active="active">
                 <a ui-sref="contacts-add">Ajouter</a>
-            </li>
-            <li>
-                <a ui-sref="home">Page principal</a>
             </li>
         </ul>
     </div>
