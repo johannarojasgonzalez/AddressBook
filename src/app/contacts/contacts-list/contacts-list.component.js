@@ -11,9 +11,16 @@ export const contactsListModule = angular.module('contacts-list.component', [
 class ContactListCtrl {
   constructor(contactService) {
     this.contacts = [];
+    this.contactService = contactService;
 
-    contactService.getAll()
+    this.contactService.getAll()
       .then(res => this.contacts = res.data);
+  }
+
+  deleteContact(id, index) {
+    this.contactService.deleteContact(id).then(() => {
+      this.contacts.splice(index, 1);
+    });
   }
 }
 

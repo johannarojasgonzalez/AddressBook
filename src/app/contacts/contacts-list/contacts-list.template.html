@@ -3,7 +3,8 @@
     <tr ng-repeat="contact in $ctrl.contacts">
         <td>{{contact.name}}</td>
         <td>
-            <a class="btn btn-xs btn-primary" href="#">Afficher</a>
+            <a class="btn btn-xs btn-primary" ui-sref="contacts-show({id: contact.id})">Afficher</a>
+            <button class="btn btn-xs btn-danger" ng-click="$ctrl.deleteContact(contact.id, $index)">Supprimer</button>
         </td>
     </tr>
 </table>

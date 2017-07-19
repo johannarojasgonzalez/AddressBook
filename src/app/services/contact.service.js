@@ -16,6 +16,14 @@ class ContactService {
   addContact(contact) {
     return this.$http.post(RESOURCE_URL, contact);
   }
+
+  deleteContact(id) {
+    return this.$http.delete(RESOURCE_URL + '/'+id);
+  }
+
+  getById(id) {
+    return this.$http.get(RESOURCE_URL + '/'+id);
+  }
 }
 
 ContactService.$inject = ['$http'];
