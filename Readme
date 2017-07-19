@@ -52,3 +52,36 @@ Dans package.json
 Pour builder le projet
 
 npm run serve:dev : le server se lance par défaut sur le port 8080
+
+
+-------------------Pour le style ------------------------------------------------------
+
+https://webpack.js.org/loaders/style-loader/
+
+npm i style-loader file-loader --save-dev
+
+Dans webpack.config.json
+
+{
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader/url" },
+          { loader: "file-loader" }
+        ]
+}
+
+npm run build:dev
+nmp run serve:dev
+
+
+Installer bootstrap
+
+npm i bootstrap
+
+https://webpack.js.org/loaders/postcss-loader/
+
+npm i -D postcss-import postcss-loader
+
+créer le fichier config + ajout de la règle dans webpack.config
+
+Dans app.style.css import de bootstrap
